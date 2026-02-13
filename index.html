@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Campaign Webhook Response</title>
+</head>
+<body>
+<pre id="json"></pre>
+
+<script>
+const payload = [
+  {
+    "lcmId": "2007",
+    "orgId": "153d96e6-b7a8-4c53-88cb-bacce14cc54b",
+    "campaignId": "SalesCampaign_Prog",
+    "dialNumber": "+15557013118",
+    "dialAt": "2026-02-17T00:14:28Z",
+    "guardTime": "2026-02-17T23:59:00Z",
+    "preferredAgentId": "",
+    "customerANI": "",
+    "customerData": [
+      { "name": "LastName", "value": "Doe" },
+      { "name": "FirstName", "value": "John" }
+    ],
+    "enforceDialAtTime": true
+  }
+];
+
+document.getElementById("json").textContent = JSON.stringify(payload, null, 2);
+</script>
+
+</body>
+</html>
